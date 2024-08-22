@@ -1,0 +1,8 @@
+#!/bin/bash
+FILES=*.nc
+for fname in $FILES
+do
+	cdo seltimestep,601/1980 $fname "time/${fname}_2.nc"
+	
+done
+

@@ -1,0 +1,8 @@
+#!/bin/bash
+FILES=*.nc
+for fname in $FILES
+do
+	cdo sellonlatbox,30,62,45,63 $fname "volga/${fname}_volga.nc"
+	cdo sellonlatbox,46,56,36,48 $fname "caspian/${fname}_caspian.nc"
+done
+
